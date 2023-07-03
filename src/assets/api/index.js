@@ -3,8 +3,8 @@ import request from "@/utils/request";
 
 export function init(data){
     return request({
-        type:'GET',
-        url:'',
-        data
+        url:'/api',
+        method:'get',
+        // data
     })
 }

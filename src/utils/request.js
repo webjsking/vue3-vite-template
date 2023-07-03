@@ -6,15 +6,15 @@ async function request(option){
     
     const server = axios.create({
         baseURL:"",
-        url:option.url,
-        method:option.type,
+        url:'',
+        method:'GET',
         timeout:6000
     });
 
 
     // 请求拦截
 
-    server.interceptors.request.request.use(config => {
+    server.interceptors.request.use(config => {
         // 设置请求头信息
         if(option && option.data){
             config.data = option.data
@@ -31,8 +31,7 @@ async function request(option){
         return response.data
     })
 
-    return server
-
+    return server(option)
 }
 
 
