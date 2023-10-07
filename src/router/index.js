@@ -12,7 +12,7 @@ const routeFiles = import.meta.glob('@/views/**/index.vue')
 const routes = []
 
 for(let k in routeFiles){
-    let list = k.replace('../views','').replace('/index.vue')
+    let list = k.replace('/src/views','').replace('/index.vue','')
     list === '' ? list = '/' : list
     routes.push({
         path:list,
@@ -21,7 +21,6 @@ for(let k in routeFiles){
         component:routeFiles[k]
     })
 }
-
 const router = createRouter({
     history:createWebHashHistory(),
     routes

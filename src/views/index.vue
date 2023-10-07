@@ -5,7 +5,6 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
-
+import { reactive, ref } from 'vue';
 const msg = ref('Hello World')
 </script>
