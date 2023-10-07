@@ -18,11 +18,11 @@ export default defineConfig({
     open:true,   //自动打开浏览器
     proxy: {     //代理
       '/api':{
-        target:'代理服务器地址',
+        target:'代理服务器地址1',
         changeOrigin:true,
       },
       '/sever':{
-        target:'代理服务器地址',
+        target:'代理服务器地址2',
         changeOrigin:true,
       }
     }
